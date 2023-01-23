@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    }
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+img{
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+
+ul{
+    list-style-type: none;
+}
+
+p{
+    font-weight: 300;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: var(--Very-dark-blue-main);
+    color: hsl(0, 0%, 100%, 60%);
+    padding: 2rem;
+}
+
+.container{
+    padding: 2rem;
+    background-color: var(--Very-dark-blue-card) ;
+    border-radius: 0.5rem;
+}
+
+.container .main-image{
+    position: relative;
+}
+.container .main-image div{
+    position: absolute;
+    top:0;
+    border-radius: 0.5rem;
+    background-color: hsl(178, 100%, 50%, 50);
+    width: 100%;
+    height: calc(100% - 4px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.container .main-image div:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  
+  .container .main-image div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.container h2{
+    color: var(--White);
+    margin: 1rem 0.5rem 0.5rem 0;
+}
+
+.container h2:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.container ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0 ;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+
+.container ul li:first-child{
+    color: var(--Cyan);
+}
+ 
+.container .avatar{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 1.5rem;
+}
+
+.container .avatar img{
+    width: 4rem;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.container .avatar p span{
+    color: var(--White);
+    font-weight: 900;
+}
+.container .avatar p span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+  }
+
+ 
+@media (min-width: 500px) {
+    .container {
+      width: 500px;
+      margin: 0 auto 1rem;
+    }
+} 
